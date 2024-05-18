@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Verônica Vilas</a>
-        <div class="container-navbar">
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#about">Sobre mim</a>
-                <a href="#projects">Projetos</a>
-            </nav>
-            <div class="social-icons">
-                <a><img src="src/assets/img/nav-icon-linkedin.svg" alt="icone do linkedin"></a>
-                <a><img src="src/assets/img/nav-icon-github.png" alt="icone do github"></a>
+  <div class="slidebar-container">
+    <div class="slidebar-content">
+      <div class="logo">
+        <a href="#">
+          <img src="src/assets/img/logo.png" alt="">
+          <span>Verônica</span>
+        </a>
+      </div>
+      <ul class="nav">
+        <li><a href="#" class="active"><i class="fa fa-home"></i>Principal</a></li>
+        <li><a href="#"><i class="fa fa-user"></i>Sobre mim</a></li>
+        <li><a href="#"><i class="fa fa-list"></i>Tecnologias</a></li>
+        <li><a href="#"><i class="fa fa-briefcase"></i>Projetos</a></li>
+        <li><a href="#"><i class="fa fa-comments"></i>Contato</a></li>
+      </ul>
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+    </div>
+    <div class="main-content">
+      <section class="home section">
+        <div class="container">
+          <div class="row">
+            <div class="home-info padd-15">
+              <h3 class="hello">Olá, meu nome é <span class="name"> Verônica Vilas</span></h3>
+              <h3 class="my-profession">Eu sou uma <span class="typing">Desenvolvedora Full Stack</span></h3>
+              <p>Unindo minha paixão por tecnologia com habilidades analíticas, busco sempre inovar e resolver problemas de forma eficiente e criativa.</p>
+              <a href="#about" class="btn hire-me">Saiba mais</a>
             </div>
-            <button class="nav-button">Download CV</button>
+          </div>
         </div>
-    </header>
-    <section class="home" id="home">
-    </section>
+      </section>
+    </div>
+  </div>
+  <script src="src/js/script.js"></script>
 </body>
 </html>
