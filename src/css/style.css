@@ -63,25 +63,30 @@ ul {
     position: absolute;
     top: 50px;
     font-size: 30px;
-    text-transform: capitalize;
-}
-
-.aside .logo a {
-    color: var(--text-black-900);
-    font-weight: 700;
-    padding: 15px 20px;
-    font-size: 30px;
-    letter-spacing: 5px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-weight: bolder;
     text-align: center;
 }
 
+.aside .logo a {
+    font-family: 'Satisfy', cursive ;
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 40px;
+    position: relative;
+}
+
 .aside .logo a span {
-    font-family: 'Satisfy', cursive;
+    position: absolute;
+    top: 14%;
+    left: 100%; 
+    transform: translate(-50%, -50%);
+    padding: 0px 50px;
+}
+
+.aside .logo a img {
+    width: 95%;
+    margin-left: -15px;
 }
 
 .aside .nav-toggler {
