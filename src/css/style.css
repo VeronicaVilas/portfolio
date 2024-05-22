@@ -446,6 +446,7 @@ h3.my-profession {
 }
 
 .technology-item {
+    content: '1 ano'; 
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
@@ -458,7 +459,6 @@ h3.my-profession {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background: conic-gradient(var(--skin-color) 3.6deg, var(--bg-black-50) 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -475,6 +475,7 @@ h3.my-profession {
 
 .circular-progress img {
     position: relative;
+    margin-top: 5px;
     width: 45px;
 }
 

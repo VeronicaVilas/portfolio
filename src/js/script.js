@@ -16,23 +16,21 @@ nextButton.addEventListener('click', () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded"), function(event) {
-    let circle = document.querySelectorAll('.circular-progress');
-    circle.forEach(function(progress) {
+document.addEventListener("DOMContentLoaded", function(event) {
+    let circles = document.querySelectorAll('.circular-progress');
+    circles.forEach(function(progress) {
         let degree = 0;
         var targetDegree = parseInt(progress.getAttribute('data-degree'));
-        let color = progress.getAttribute('data-color');
-        let number = progress.querySelectorAll('.number');
+        let color = getComputedStyle(progress).getPropertyValue('--skin-color');
 
         var interval = setInterval(function() {
             degree += 1;
             if(degree > targetDegree) {
                 clearInterval(interval);
-                return
+                return;
             }
-            progress.style.background = `conic-gradient(${color} ${degree}%, #222 0%)`;
-            number.innerHTML = degree + '<span>%<span>';
-            number.style.color = color;
-        })
-    })
-}
+            progress.style.background = `conic-gradient(${color} ${degree}%, #e8dfec 0%)`;
+        }, 10); // Adjust the interval duration if needed
+    });
+});
+
