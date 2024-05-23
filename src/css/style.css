@@ -489,7 +489,7 @@ h3.my-profession {
     margin-top: 50px;
 }
   
-.card .profile-pic {
+.card .project-img {
     position: absolute;
     width: calc(100% - 6px);
     height: calc(100% - 6px);
@@ -502,7 +502,7 @@ h3.my-profession {
     transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
 }
   
-.card .profile-pic img {
+.card .project-img img {
     width: 100%;
     height: 100%;
     -o-object-position: 0px 0px;
@@ -510,7 +510,7 @@ h3.my-profession {
     transition: all 0.5s ease-in-out 0s;
 }
 
-.card .bottom {
+.card .bottom-info{
     position: absolute;
     bottom: 3px;
     left: 3px;
@@ -524,7 +524,7 @@ h3.my-profession {
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
   
-.card .bottom .content {
+.card .bottom-info .content {
     position: absolute;
     bottom: 0;
     left: 1.5rem;
@@ -532,7 +532,7 @@ h3.my-profession {
     height: 160px;
 }
   
-.card .bottom .content .about-me {
+.card .bottom-info .content .about-me {
     display: block;
     font-size: 0.9rem;
     color: white;
@@ -540,7 +540,7 @@ h3.my-profession {
     margin-top: -20px;
 }
   
-.card .bottom .bottom-bottom {
+.card .bottom-info .bar-info {
     position: absolute;
     bottom: 1rem;
     left: 1.5rem;
@@ -550,35 +550,35 @@ h3.my-profession {
     justify-content: space-between;
 }
   
-.card .bottom .bottom-bottom .social-links-container {
+.card .bottom-info .bar-info .social-links-container {
     display: flex;
     gap: 1rem;
     color: white;
 }
 
-.card .bottom .bottom-bottom .social-links-container .fa-github,
-.card .bottom .bottom-bottom .social-links-container .fa-earth-americas {
+.card .bottom-info .bar-info .social-links-container .fa-github,
+.card .bottom-info .bar-info .social-links-container .fa-earth-americas {
     color: white;
 }
 
-.card .bottom .bottom-bottom .social-links-container a {
+.card .bottom-info .bar-info .social-links-container a {
     height: 20px;
     fill: white;
     filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
 }
   
-.card .bottom .bottom-bottom .social-links-container a:hover {
+.card .bottom-info .bar-info .social-links-container a:hover {
     fill: #f55d56;
     transform: scale(1.2);
 }
   
-.card .bottom .bottom-bottom .title {
+.card .bottom-info .bar-info .bar-title {
     color: white;
     font-size: 0.8rem;
     padding: 0.4rem 0.6rem;
 }
   
-.card .bottom .bottom-bottom .button:hover {
+.card .bottom-info .bar-info .button:hover {
     background: #f55d56;
     color: white;
 }
@@ -587,13 +587,13 @@ h3.my-profession {
     border-top-left-radius: 55px;
 }
   
-.card:hover .bottom {
+.card:hover .bottom-info {
     top: 20%;
     border-radius: 80px 29px 29px 29px;
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
   
-.card:hover .profile-pic {
+.card:hover .project-img {
     width: 100px;
     height: 100px;
     aspect-ratio: 1;
@@ -606,19 +606,19 @@ h3.my-profession {
     transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
 }
   
-.card:hover .profile-pic:hover {
+.card:hover .project-img:hover {
     transform: scale(1.3);
     border-radius: 0px;
 }
   
-.card:hover .profile-pic img {
+.card:hover .project-img img {
     transform: scale(2.5);
     -o-object-position: 0px 25px;
     object-position: 0px 25px;
     transition: all 0.5s ease-in-out 0.5s;
 }
 
-.card .bottom .content .button {
+.card .bottom-info .content .button-technology {
     background: white;
     color: var(--skin-color);
     border: none;
