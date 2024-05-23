@@ -16,21 +16,32 @@ nextButton.addEventListener('click', () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    let circles = document.querySelectorAll('.circular-progress');
-    circles.forEach(function(progress) {
-        let degree = 0;
-        var targetDegree = parseInt(progress.getAttribute('data-degree'));
-        let color = getComputedStyle(progress).getPropertyValue('--skin-color');
+document.addEventListener("DOMContentLoaded", function() {
+    const technologiesLink = document.querySelector('.technologies');
+    const technologiesContainer = document.querySelector('.carousel-technologies-container');
+    const educationLink = document.querySelector('.education');
+    const educationContainer = document.querySelector('.education-content');
+    const certificationsLink = document.querySelector('.certifications');
+    const certificationsContainer = document.querySelector('.certifications-content');
 
-        var interval = setInterval(function() {
-            degree += 1;
-            if(degree > targetDegree) {
-                clearInterval(interval);
-                return;
-            }
-            progress.style.background = `conic-gradient(${color} ${degree}%, #e8dfec 0%)`;
-        }, 10); // Adjust the interval duration if needed
+    technologiesLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        technologiesContainer.style.display = 'block';
+        educationContainer.style.display = 'none';
+        certificationsContainer.style.display = 'none';
+    });
+
+    educationLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        technologiesContainer.style.display = 'none';
+        educationContainer.style.display = 'block';
+        certificationsContainer.style.display = 'none';
+    });
+
+    certificationsLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        technologiesContainer.style.display = 'none';
+        educationContainer.style.display = 'none';
+        certificationsContainer.style.display = 'block';
     });
 });
-
