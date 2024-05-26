@@ -23,7 +23,6 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
 }
 
 ::before, ::after {
@@ -485,18 +484,24 @@ h3.my-profession {
 .portfolio .portfolio-heading {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .portfolio .portfolio-heading h2 {
-    color: green;
+
+    color: var(--text-black-900);
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .portfolio .portfolio-item {
     flex: 0 0 33.33;
     max-width: 33.33%;
-    margin-bottom: 30px;
-    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .portfolio .portfolio-item-inner {
@@ -507,6 +512,7 @@ h3.my-profession {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    background: var(--bg-black-100);
 }
 
 .portfolio .portfolio-item-inner .card {
@@ -517,14 +523,13 @@ h3.my-profession {
     height: 320px;
     background: var(--bg-black-100);
     border-radius: 32px;
-    padding: 3px;
     transition: all 0.5s ease-in-out;
 }
 
   
 .portfolio .portfolio-item-inner .card .project-img {
     position: relative;
-    width: calc(100% - 6px);
+    width: 98.5%;
     height: calc(100% - 6px);
     top: 3px;
     left: 3px;
@@ -545,10 +550,9 @@ h3.my-profession {
 
 .portfolio .portfolio-item-inner .card .bottom-info{
     position: absolute;
-    width: 100%;
+    width: 99.5%;
+    left: 1px;
     bottom: 3px;
-    left: -0.5px;
-    right: 3px;
     background: var(--skin-color);
     top: 80%;
     border-radius: 29px;
@@ -603,7 +607,6 @@ h3.my-profession {
 }
   
 .portfolio .portfolio-item-inner .card .bottom-info .bar-info .social-links-container a:hover {
-    fill: #f55d56;
     transform: scale(1.6);
 }
   
@@ -614,7 +617,6 @@ h3.my-profession {
 }
   
 .portfolio .portfolio-item-inner .card .bottom-info .bar-info .button:hover {
-    background: #f55d56;
     color: white;
 }
   
@@ -647,9 +649,7 @@ h3.my-profession {
 }
   
 .portfolio .portfolio-item-inner .card:hover .project-img img {
-    transform: scale(2.5);
-    -o-object-position: 0px 25px;
-    object-position: 0px 25px;
+    transform: scale(1);
     transition: all 0.5s ease-in-out 0.5s;
 }
 
