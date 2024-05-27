@@ -333,6 +333,7 @@ h3.my-profession {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 20px;
+    height: 400px;
 }
 
 .about-img::after {
@@ -342,7 +343,7 @@ h3.my-profession {
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 25px;
+    right: 30px;
     bottom: -30px;
 }
 
@@ -399,18 +400,18 @@ h3.my-profession {
     font-weight: 700;
 }
 
-.carousel-technologies-container {
+.about .about-content .carousel-technologies-container {
     display: flex;
     align-items: center;
-    position: fixed;
-    width: 45%;
+    position: relative;
+    width: 100%; 
     overflow: hidden;
     border-radius: 20px;
     background: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
 }
 
-.carousel-technologies-container .carousel-button {
+.about-info .carousel-technologies-container .carousel-button {
     font-size: 16px;
     border: none;
     border-radius: 50%;
@@ -455,7 +456,7 @@ h3.my-profession {
 .carousel-technologies-container .technology-item img {
     position: relative;
     margin-top: 5px;
-    width: 90px;
+    width: 80px;
     height: 80px;
 }
 
@@ -468,7 +469,7 @@ h3.my-profession {
 
 .education-content,
 .certifications-content {
-    position: fixed;
+    position: relative;
     display: none; 
     padding-left: 15px;
     padding-right: 15px;
@@ -632,3 +633,68 @@ h3.my-profession {
     color: var(--text-black-700);
     font-weight: 400;
 }
+
+@media (max-width:1199px) {
+
+    .slidebar-content {
+        left: -270px;
+    }
+
+    .main-content {
+        padding-left: 0;
+    }
+}
+
+
+@media (max-width:991px) {
+
+    h3.hello {
+        font-size: 22px;
+    }
+    
+    h3.hello span {
+        font-size: 34px;
+    }
+
+    h3.my-profession {
+        font-size: 24px;
+    }
+    
+    .about .about-content .about-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-img{
+        display: none;
+    }
+
+    .contact .contact-info-item {
+        flex: 0 0 33%;
+        max-width: 33%;
+        text-align: center;
+    }
+
+    .contact .contact-info-item .icon{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:991px) {
+
+    .contact .contact-info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width:699px) {
+
+    .home .home-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+    }
+}
+
