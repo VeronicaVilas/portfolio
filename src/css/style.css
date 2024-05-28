@@ -2,13 +2,20 @@
 
 
 :root {
-    --bg-black-900:#f2f2fc;
-    --bg-black-100:#fdf9FF;
-    --bg-black-50:#e8dfec;
-    --text-black-900:#302e4d;
-    --text-black-700:#504e70;
+    --bg-black-900:#F2F2FC;
+    --bg-black-100:#FDF9FF;
+    --bg-black-50:#E8DFEC;
+    --text-black-900:#302E4D;
+    --text-black-700:#504E70;
     --skin-color: #CA2DE8;
-    --linear-gradiente-color:  linear-gradient(#3b82f6, rgb(168,85,247), #ec4899);
+}
+
+body.dark {
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#FFFFFF;
+    --text-black-700:#E9E9E9;
 }
 
 * {
@@ -233,7 +240,7 @@ body {
 h3.hello {
     font-size: 28px;
     margin: 15px 0;
-    color: var(--bg-black-900);
+    color: #F2F2FC;
 }
 
 h3.hello span {
@@ -249,7 +256,7 @@ h3.hello span {
 h3.my-profession {
     font-size: 30px;
     margin: 15px 0;
-    color: var(--bg-black-900);
+    color: #F2F2FC;
 }
 
 .typing {
@@ -262,7 +269,7 @@ h3.my-profession {
 .home-info p {
     margin-bottom: 70px;
     font-size: 20px;
-    color: var(--bg-black-50);
+    color: #E8DFEC;
 }
 
 .home-button-about {
@@ -298,6 +305,10 @@ h3.my-profession {
     border-radius: 40px;
     border: 4px solid  #db2777;
     transition: all 0.3s ease;
+}
+
+.home-button-download:hover {
+    transform: scale(1.05);
 }
 
 .home-button-download::after {
