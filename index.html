@@ -6,6 +6,7 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="src/css/style-switcher.css">
 </head>
 <body>
   <div class="slidebar-container">
@@ -17,30 +18,30 @@
         </a>
       </div>
       <ul class="nav">
-        <li><a href="#" class="active"><i class="fa fa-home"></i>Principal</a></li>
-        <li><a href="#"><i class="fa fa-user"></i>Sobre mim</a></li>
-        <li><a href="#"><i class="fa fa-briefcase"></i>Projetos</a></li>
-        <li><a href="#"><i class="fa fa-comments"></i>Contato</a></li>
+        <li><a href="#home" class="active"><i class="fa fa-home"></i>Principal</a></li>
+        <li><a href="#about"><i class="fa fa-user"></i>Sobre mim</a></li>
+        <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Projetos</a></li>
+        <li><a href="#contact"><i class="fa fa-comments"></i>Contato</a></li>
       </ul>
       <div class="nav-toggler">
         <span></span>
       </div>
     </div>
     <div class="main-content">
-      <section class="home section">
+      <section class="home active section" id="home">
         <div class="container">
           <div class="row">
             <div class="home-info">
               <h3 class="hello">Olá, meu nome é <span class="name"> Verônica Vilas</span></h3>
               <h3 class="my-profession">Eu sou uma <span class="typing">Desenvolvedora Full Stack</span></h3>
               <p>Unindo minha paixão por tecnologia com habilidades analíticas, busco sempre inovar e resolver problemas de forma eficiente e criativa.</p>
-              <a href="#about" class="home-button-about hire-me">Saiba mais</a>
-              <a href="#" class="home-button-download">Download CV</a>
+              <a href="#about" data-section-index="0" class="home-button-about about-me">Saiba mais</a>
+              <a id="downloadCVButton" class="home-button-download">Download CV</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="about section hidd">
+      <section class="about section" id="about">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -159,7 +160,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio section">
+      <section class="portfolio section" id="portfolio">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -174,7 +175,7 @@
                     <img src="/src/assets/img/portfolio/project-trainsys.png" alt="Foto da tela de cadastro do projeto trainsys">
                   </div>
                   <div class="card-social-links">
-                    <a href="https://github.com/VeronicaVilas/E-Commerce_Amigurumi_Shop" class="card-social-links-github">
+                    <a href="https://github.com/VeronicaVilas/ProjetoFinal_Modulo1_TrainSys/tree/main/TrainSys" class="card-social-links-github">
                       <i class="fa-brands fa-github"></i>
                     </a>
                   </div>
@@ -267,7 +268,7 @@
           </div>
         </div>
       </section>
-      <section class="contact section">
+      <section class="contact section" id="contact">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -307,6 +308,13 @@
       </section>
     </div>
   </div>
+  <div class="style-switcher">
+    <div class="day-night s-icon">
+      <i class="fas fa-moon"></i>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="src/js/script.js"></script>
+  <script src="src/js/style-switcher.js"></script>
 </body>
 </html>
