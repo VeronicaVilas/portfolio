@@ -42,14 +42,39 @@ body {
     display: block;
     padding: 0 30px;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
 }
 
+.section.back-section {
+    z-index: 1;
+}
+
+.section.active {
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+
+
+@keyframes slideSection {
+
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
 .hidden {
     display: none !important;
-}
-
-.main-content {
-    padding-left: 270px;
 }
 
 .container {
@@ -121,6 +146,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .slidebar-content .logo {
@@ -191,7 +217,12 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
  
+}
+
+.slidebar-content .nav-toggler.open span {
+    background-color: transparent;
 }
 
 .slidebar-content .nav-toggler span {
@@ -202,6 +233,11 @@ body {
     position: relative;
 }
 
+.slidebar-content .nav-toggler.open span:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
 .slidebar-content .nav-toggler span::before {
     content: '';
     height: 2px;
@@ -210,6 +246,11 @@ body {
     position: absolute;
     top: -6px;
     left: 0;
+}
+
+.slidebar-content .nav-toggler.open span:after {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .slidebar-content .nav-toggler span::after {
@@ -420,6 +461,8 @@ h3.my-profession {
     border-radius: 20px;
     background: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
+    left: -10px;
+    top: -10px;
 }
 
 .about-info .carousel-technologies-container .carousel-button {
@@ -647,12 +690,40 @@ h3.my-profession {
 
 @media (max-width:1199px) {
 
+    .section .container {
+        padding-top: 100px;
+    }
     .slidebar-content {
         left: -270px;
     }
 
-    .main-content {
-        padding-left: 0;
+    .slidebar-content.open {
+        left: 0;
+    }
+
+    .slidebar-content .nav-toggler {
+        display: flex;
+        left: 30px;
+    }
+
+    .slidebar-content .nav-toggler.open {
+        left: 300px;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    .section.open {
+        left: 270px;
+    }
+
+    .about-img::after {
+        display: none;
+    }
+    
+    .about-img::before {
+        display: none;
     }
 }
 
