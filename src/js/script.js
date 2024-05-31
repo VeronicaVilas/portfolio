@@ -121,23 +121,27 @@ const nav = document.querySelector(".nav"),
         }
     }
 
-    document.querySelector(".about-me").addEventListener("click", function() {
-        const sectionIndex = this.getAttribute("data-section-index");
-        showSection(this);
-        updateNav(this);
-        removeBackSection();
-        addBackSection(sectionIndex);
-    })
+document.querySelector(".about-me").addEventListener("click", function() {
 
-    const navTogglerBtn = document.querySelector(".nav-toggler"),
-        slidebarContent = document.querySelector(".slidebar-content");
-        navTogglerBtn.addEventListener("click", () => {
-            slideBarSectionTogglerBtn();
-        })
-        function slideBarSectionTogglerBtn() {
-            slidebarContent.classList.toggle("open");
-            navTogglerBtn.classList.toggle("open");
-            for(let i=0; i<totalSection; i++) {
-                allSection[i].classList.toggle("open");
-            }
+    const sectionIndex = this.getAttribute("data-section-index");
+
+    showSection(this);
+    updateNav(this);
+    removeBackSection();
+    addBackSection(sectionIndex);
+})
+
+const navTogglerBtn = document.querySelector(".nav-toggler"),
+    slidebarContent = document.querySelector(".slidebar-content");
+    
+    navTogglerBtn.addEventListener("click", () => {
+        slideBarSectionTogglerBtn();
+    })
+    
+    function slideBarSectionTogglerBtn() {
+        slidebarContent.classList.toggle("open");
+        navTogglerBtn.classList.toggle("open");
+        for(let i=0; i<totalSection; i++) {
+            allSection[i].classList.toggle("open");
         }
+    }
