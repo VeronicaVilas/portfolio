@@ -362,6 +362,7 @@ h3.my-profession {
     position: absolute;
     left: 0;
     top: 0;
+    cursor: pointer;
 }
 
 .home-button-download:active {

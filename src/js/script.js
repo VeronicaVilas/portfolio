@@ -5,6 +5,24 @@ var typed = new Typed(".typing", {
     loop:true,
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    var downloadButton = document.getElementById('downloadCVButton');
+
+    downloadButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        downloadCV();
+    });
+
+    function downloadCV() {
+        var link = document.createElement('a');
+        link.href = 'src/assets/pdf/curriculo.pdf';
+        link.download = 'curriculo.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+});
+
 const prevButton = document.querySelector('.carousel-button.prev');
 const nextButton = document.querySelector('.carousel-button.next');
 const carousel = document.querySelector('.technologies-content');
