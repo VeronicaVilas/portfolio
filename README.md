@@ -14,7 +14,7 @@ Para acessar para clicar no botão abaixo:
 ![JavaScript](https://img.shields.io/badge/JavaScript-000?style=for-the-badge&logo=javascript&logoColor=ED8B00)
 ![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)
 ![Git](https://img.shields.io/badge/Git-000?style=for-the-badge&logo=git&logoColor=E94D5F)
-![Vercel](https://img.shields.io/badge/vercel-000?style=for-the-badge&logo=vercel&logoColor=E94D5F)
+![Vercel](https://img.shields.io/badge/vercel-000?style=for-the-badge&logo=vercel&logoColor=FFF)
 
 
 ## 👀 Veja o portfólio
