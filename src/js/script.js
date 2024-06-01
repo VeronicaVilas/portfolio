@@ -77,25 +77,28 @@ const nav = document.querySelector(".nav"),
     allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length;
 
-    for(let i=0; i<totalNavList; i++) {
-        const a = navList[i].querySelector("a");
+    for(let navItemIndex=0; navItemIndex<totalNavList; navItemIndex++) {
+        const a = navList[navItemIndex].querySelector("a");
         a.addEventListener("click", function() {
 
             removeBackSection();
-            for(let j=0; j<totalNavList; j++) {
-                if(navList[j].querySelector("a").classList.contains("active")) {
-                    addBackSection(j);
+            for(let backNavItemIndex=0; backNavItemIndex<totalNavList; backNavItemIndex++) {
+                if(navList[backNavItemIndex].querySelector("a").classList.contains("active")) {
+                    addBackSection(backNavItemIndex);
                 }
-                navList[j].querySelector("a").classList.remove("active");
+                navList[backNavItemIndex].querySelector("a").classList.remove("active");
             }
             this.classList.add("active");
             showSection(this);
+            if(window.innerWidth < 1200) {
+                slideBarSectionTogglerBtn();
+            }
         })
     }
 
     function removeBackSection() {
-        for(let i=0; i<totalSection; i++) {
-            allSection[i].classList.remove("back-section");
+        for(let sectionIndex=0; sectionIndex<totalSection; sectionIndex++) {
+            allSection[sectionIndex].classList.remove("back-section");
         }
     }
 
@@ -104,19 +107,19 @@ const nav = document.querySelector(".nav"),
     }
 
     function showSection(element) {
-        for(let i=0; i<totalSection; i++) {
-            allSection[i].classList.remove("active");
+        for(let sectionIndex=0; sectionIndex<totalSection; sectionIndex++) {
+            allSection[sectionIndex].classList.remove("active");
         }
         const target = element.getAttribute("href").split("#")[1];
         document.querySelector("#" + target). classList.add("active");
     }
 
     function updateNav(element) {
-        for(let i=0; i<totalNavList; i++) {
-            navList[i].querySelector("a").classList.remove("active");
+        for(let navItemIndex=0; navItemIndex<totalNavList; navItemIndex++) {
+            navList[navItemIndex].querySelector("a").classList.remove("active");
             const target = element.getAttribute("href").split("#")[1];
-            if(target === navList[i].querySelector("a").getAttribute("href").split("#")[1]) {
-                navList[i].querySelector("a").classList.add("active");
+            if(target === navList[navItemIndex].querySelector("a").getAttribute("href").split("#")[1]) {
+                navList[navItemIndex].querySelector("a").classList.add("active");
             }
         }
     }
@@ -141,7 +144,7 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
     function slideBarSectionTogglerBtn() {
         slidebarContent.classList.toggle("open");
         navTogglerBtn.classList.toggle("open");
-        for(let i=0; i<totalSection; i++) {
-            allSection[i].classList.toggle("open");
+        for(let sectionIndex=0; sectionIndex<totalSection; sectionIndex++) {
+            allSection[sectionIndex].classList.toggle("open");
         }
     }

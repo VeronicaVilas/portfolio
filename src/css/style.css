@@ -161,14 +161,13 @@ body {
     font-style: normal;
     font-size: 45px;
     color: var(--text-black-900);
-    padding: 15px 20px;
     position: relative;
 }
 
 .slidebar-content .logo a span {
     position: absolute;
-    top: 14%;
-    left: 95%; 
+    top: 15%;
+    left: 50%; 
     transform: translate(-50%, -50%);
     padding: 0px 50px;
 }
@@ -376,6 +375,7 @@ h3.my-profession {
     max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 10%;
 }
 
 .about .about-content .about-img {
@@ -687,6 +687,12 @@ h3.my-profession {
     line-height: 25px;
     color: var(--text-black-700);
     font-weight: 400;
+}
+
+@media (max-width: 1366px) {
+    .about .about-content {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width:1199px) {
